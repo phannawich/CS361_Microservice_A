@@ -42,12 +42,12 @@ The subprocess.run command triggers the microservice, which processes the reques
 After the microservice processes the requests, the results are stored in commands.txt.
 
 ```
-#Reading the response from the microservice
+# Reading the response from the microservice
 
 with open('commands.txt', 'r') as file:
     results = file.readlines()
 
-#Process the results
+# Process the results
 
 results = [line.strip() for line in results]
 print(results)
