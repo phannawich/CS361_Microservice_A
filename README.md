@@ -18,8 +18,6 @@ The program supports the following commands:
 2. **`vowels`**: Counts the number of vowels in the word
 3. **`repeats`**: Counts the repeat letter in the word
 
----
-
 ## Requesting Data
 To programmatically send a request to the microservice, follow these steps:
 
@@ -44,10 +42,12 @@ The subprocess.run command triggers the microservice, which processes the reques
 After the microservice processes the requests, the results are stored in commands.txt.
 
 //Reading the response from the microservice
+
 with open('commands.txt', 'r') as file:
     results = file.readlines()
 
 //Process the results
+
 results = [line.strip() for line in results]
 print(results)
 
