@@ -31,18 +31,31 @@ command,word
 
 Execute the word_analyzer.py script to process the commands.
 
-#### How to use this microservice in your main program
+#### Example call to use this microservice in your main program
 import subprocess
 subprocess.run(['python', 'word_analyzer.py'])
-Explanation:
 
-The commands.txt file is populated with the requests.
+Explanation:
+After the commands.txt file is populated with the requests.
 The subprocess.run command triggers the microservice, which processes the requests.
 
 ## Receiving Data
 
 After the microservice processes the requests, the results are stored in commands.txt.
+
+//Reading the response from the microservice
+with open('commands.txt', 'r') as file:
+    results = file.readlines()
+
+//Process the results
+results = [line.strip() for line in results]
+print(results)
+
 The above script reads the responses line-by-line and stores them in a list for further use.
 
 ---
+
+### UML
+![image](https://github.com/user-attachments/assets/e59ad49f-a582-43cd-8acf-be2a332b34ec)
+
 
